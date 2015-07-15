@@ -2,6 +2,7 @@ nnoremap <C-b> :BufExplorer<CR><CR>
 nnoremap <C-n> :NERDTreeToggle<CR><CR>
 " nnoremap <C-i> :TlistToggle<CR><CR>
 nnoremap <C-t> :TagbarToggle<CR>
+nnoremap <C-z> :Goyo<CR>
 
 " Visual mode pressing * or # searches for the current selection
 " Super useful! From an idea by Michael Naumann

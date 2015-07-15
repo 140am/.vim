@@ -2,11 +2,11 @@
 
 ## What is this?
 
-I appreciate a good IDE but love the speed and flexibility of [vim](http://www.vim.org/) especially [MacVim](https://github.com/macvim-dev/macvim). This is my daily used configuration of plugins and vim settings. Use at your own risk!
+I appreciate a good IDE but love the speed and flexibility of [vim](http://www.vim.org/) especially [MacVim](https://github.com/macvim-dev/macvim). This is my daily used configuration of plugins and vim settings using MacVim in OS X. Use at your own risk!
 
 My primarily used languages are:
 
-- golang
+- go
 - python
 - javascript / coffeescript
 
@@ -54,6 +54,7 @@ Start `vim` or `mvim` (MacVim).
 - ctrl-n : file explorer
 - ctrl-t : tag bar
 - ctrl-b : buffer explorer
+- ctrl-z : fullscreen zen mode
 
 
 ## Used Plugins
@@ -91,13 +92,16 @@ Very nice status/tabline which works with git fugitive, syntastic, nerdtree etc.
 ### Ag
 Frontend for A.K.A. [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) which is a fast ack / search replacement. 
 
+### vim-zenroom2 + goyo.vim
+Inspired by iA Writer for editing Markdown and reStructuredText in a distraction free environment.
+
 ### vim-go
 Go comes with basic vim plugins. The `vim-go` plugin provides additional improved syntax highlighting, auto completion, gofmt on save, go to declrations and much more.
 
 
 ## Color Themes
 
-I use the molokai color scheme but included a few others I like. To switch between the difference themes run within vim:
+I use the `molokai` color scheme by default and `mayansmoke` in full screen zen mode. A few others I like can be activated by using the following commands within vim:
 
 - colorscheme peaksea
 - colorscheme wombat

@@ -1,5 +1,31 @@
 " ------------------------------------------------------
-" NERDTree - https://github.com/scrooloose/nerdtree
+" goyo.vim - https://github.com/junegunn/goyo.vim
+" ------------------------------------------------------
+function! s:goyo_enter()
+  if has('gui_running')
+    set fullscreen
+    " set background=light
+    colorscheme mayansmoke
+    set linespace=7
+  elseif exists('$TMUX')
+    silent !tmux set status off
+  endif
+endfunction
+
+function! s:goyo_leave()
+  if has('gui_running')
+    colorscheme molokai
+    set linespace=0
+  elseif exists('$TMUX')
+    silent !tmux set status on
+  endif
+endfunction
+
+autocmd User GoyoEnter nested call <SID>goyo_enter()
+autocmd User GoyoLeave nested call <SID>goyo_leave()
+
+" ------------------------------------------------------
+" vim-g - https://github.com/fatih/vim-go
 " ------------------------------------------------------
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1

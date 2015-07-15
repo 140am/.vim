@@ -97,6 +97,9 @@ Frontend for A.K.A. [the_silver_searcher](https://github.com/ggreer/the_silver_s
 ### vim-zenroom2 + goyo.vim
 Inspired by iA Writer for editing Markdown and reStructuredText in a distraction free environment.
 
+### vim-coffee-script
+CoffeeScript syntax, indenting, compiling support.
+
 ### vim-go
 Go comes with basic vim plugins. The `vim-go` plugin provides additional improved syntax highlighting, auto completion, gofmt on save, go to declrations and much more.
 

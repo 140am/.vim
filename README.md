@@ -43,6 +43,8 @@ To make use of the `ag` search plugin install:
 Clone the repository to your machine:
 
 > git clone git://github.com/140am/vimrc.git ~/.vim  
+> cd .vim  
+> git submodule init  
 > git submodule update  
 > cat ~/.vim/vimrc > ~/.vimrc
 

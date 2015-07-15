@@ -1,13 +1,14 @@
-# vim @ 140am
+# vim @140am
 
 ## What is this?
 
-I appreciate a good IDE but love the speed and flexibility of [vim](http://www.vim.org/) especially [MacVim](https://github.com/macvim-dev/macvim). This is my daily used configuration of plugins and vim settings using MacVim in OS X. Use at your own risk!
+I appreciate a good IDE (hi JetBrains and Sublime Text) but love the speed and flexibility of [vim](http://www.vim.org/) and [MacVim](https://github.com/macvim-dev/macvim). After years of Sublime Text 2/3 use I moved back to `vim`. My primary motivation being the lack of a good `go` plugin and my lag of mouse use. This is my daily used configuration of plugins and settings using MacVim on OS X. Use at your own risk!
 
 My primarily used languages are:
 
 - go
 - python
+- german
 - javascript / coffeescript
 
 
@@ -29,6 +30,10 @@ To install the MacVim GUI run:
 > brew install macvim --with-lua --with-cscope
 
 ### Optional
+
+The `tagbar` source code browser requires ctags:
+
+> brew install ctags
 
 If you plan on using `go` install:
 

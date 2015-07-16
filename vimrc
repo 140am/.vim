@@ -30,6 +30,14 @@ set textwidth=79
 set fo-=t
 set wrap 
 
+" speed up syntax highlighting
+set nocursorcolumn
+set nocursorline
+
+syntax sync minlines=256
+set synmaxcol=300
+set re=1
+
 " set fold method to syntax
 set foldmethod=syntax
 set foldnestmax=10

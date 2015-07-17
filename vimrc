@@ -20,10 +20,10 @@ set expandtab
 " add/removal of space indent
 set smarttab
 " number of space to use for auto indent
-set shiftwidth=4
+set shiftwidth=2
 " user spaces to represent a tab
-set tabstop=4
-set softtabstop=4
+set tabstop=2
+set softtabstop=2
 
 " text width / wrapping
 set textwidth=79

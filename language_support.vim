@@ -4,10 +4,6 @@
 " Markdown .md extension
 au BufRead,BufNewFile *.md set filetype=markdown
 
-" Javascript
-autocmd FileType javascript setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
-let javascript_enable_domhtmlcss=1
-
 " Delete trailing white space on save, useful for Python and CoffeeScript ;)
 func! DeleteTrailingWS()
   exe "normal mz"

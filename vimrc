@@ -38,7 +38,6 @@ syntax sync minlines=256
 set synmaxcol=300
 set re=1
 
-" set fold method to syntax
 set foldmethod=syntax
 set foldnestmax=10
 set nofoldenable
@@ -187,6 +186,12 @@ execute pathogen#infect()
 if !empty(glob("~/.vimrc.custom"))
     source ~/.vimrc.custom
 endif
+
+" watch for config edits and reload (source) if so
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,.vimrc.custom so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
+augroup END
 
 source ~/.vim/helper_function.vim
 source ~/.vim/keymap.vim

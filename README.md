@@ -55,14 +55,19 @@ Clone the repository to your machine:
 
 Start `vim` or `mvim` (MacVim).
 
+Install go tools if required (gocode, godef, goimport,..) within `vim` via:
+
+> :GoInstallBinaries
+
 
 ## Example Keyboard Shortcuts
 
-- ctrl-n : file explorer
-- ctrl-t : tag bar
-- ctrl-b : buffer explorer
-- ctrl-z : fullscreen zen mode
+- ctrl + n : file explorer
+- ctrl + t : tag bar
+- ctrl + b : buffer explorer
+- ctrl + z : fullscreen zen mode
 
+- \\ + ig : Highlight 
 
 ## Used Plugins
 
@@ -98,6 +103,9 @@ Very nice status/tabline which works with git fugitive, syntastic, nerdtree etc.
 
 ### Ag
 Frontend for A.K.A. [the_silver_searcher](https://github.com/ggreer/the_silver_searcher) which is a fast ack / search replacement. 
+
+### vim-indent-guides
+Visually displays indent levels.
 
 ### vim-zenroom2 + goyo.vim
 Inspired by iA Writer for editing Markdown and reStructuredText in a distraction free environment.

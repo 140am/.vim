@@ -109,7 +109,7 @@ let g:tagbar_type_go = {
 " neocomplete - https://github.com/Shougo/neocomplete.vim
 " ------------------------------------------------------
 
-" Disable AutoComplPop.
+" Use AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
@@ -118,13 +118,6 @@ let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-" Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')

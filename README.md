@@ -2,15 +2,7 @@
 
 ## What is this?
 
-I appreciate a good IDE (hi JetBrains and Sublime Text) but love the speed and flexibility of [vim](http://www.vim.org/) and [MacVim](https://github.com/macvim-dev/macvim). After years of Sublime Text 2/3 use I moved back to `vim`. My primary motivation being the lack of a good `go` plugin and my lag of mouse use. This is my daily used configuration of plugins and settings using MacVim on OS X. Use at your own risk!
-
-My primarily used languages are:
-
-- go
-- python
-- german
-- javascript / coffeescript
-
+I appreciate a good IDE (hi JetBrains and Sublime Text) but love the speed and flexibility of [vim](http://www.vim.org/) and [MacVim](https://github.com/macvim-dev/macvim). After years of Sublime Text 2/3 use I moved back to `vim` but did not want to loose anything I got used to. My primary motivation being the lack of a good `go` plugin and my lag of mouse use. This is my daily used configuration of plugins and settings using MacVim on OS X.
 
 ## How does it look?
 
@@ -21,13 +13,15 @@ My primarily used languages are:
 
 Vim 7.4+ with lua support (required by the neocomplete plugin).
 
-To install on OSX using [homebrew](http://brew.sh/) run:
+To install the latest `vim` on OSX using [homebrew](http://brew.sh/) run:
 
 > brew install vim --with-lua --override-system-vim
 
-To install the MacVim GUI run:
+To install MacVim run:
 
 > brew install macvim --with-lua --with-cscope
+
+Start with `macvim`.
 
 ### Optional
 
@@ -72,22 +66,22 @@ Install go tools if required (gocode, godef, goimport,..) within `vim` via:
 ## Used Plugins
 
 ### pathogen
-Manages the vim runtime path. To install any new vim plugin simply place them into the `.vim/bundle` directory.
+Manages the vim runtime. To install any new vim plugin simply place them into `.vim/bundle`.
 
 ### fugitive
 Great `git` wrapper giving you everything to use git from within vim.
 
 ### gitgutter
-Showing `git diff` in the sign column, to show weather each line has been added, modified or removed.
+Showing `git diff` in the sign column, to show weather any line has been modified.
 
 ### NERDTree
 Filesystem explorer to browse files and directories in the side bar.
 
 ### Syntastic
-Syntax detection and works great with TagBar together.
+Syntax checking using multiple external syntax checkers.
 
 ### neocomplete
-Provides keyword completion and works great with vim-go.
+Provides keyword completion.
 
 ### tagbar
 Eeasy way to browse the tags of the current file and get an overview of its structure. Requires [Exuberant ctags](http://ctags.sourceforge.net/) and if used with `go` [gotags](https://github.com/jstemmer/gotags).
@@ -130,7 +124,7 @@ I use the `molokai` color scheme by default and `mayansmoke` in full screen zen 
 
 ## Configuration
 
-I use the following configuration files to hold everything together:
+The following configuration files hold everything together:
 
 ### .vim/keymap.vim
 Custom keyboard mappings as mentioned above and some others.
@@ -144,10 +138,13 @@ Language specific settings - I should move those to ftplugin/ one day.
 ### .vim/helper_function.vim
 Useful helper functions i found online used in various places.
 
+### ftplugin/
+Any language/file specific settings can be found in the ftplugin/ directory.
+
+### Custom Settings
 If you wish to set custom settings create the file `~/.vimrc.custom`.
 
 
 ## Credit
 
 Most of the plugins I choosed to use I found via the great [vimrc](https://github.com/amix/vimrc) by @amix and the [gist](https://gist.github.com/cridenour/74e7635275331d5afa6b) by @cridenour. Thank you!
-

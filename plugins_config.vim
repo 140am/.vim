@@ -42,12 +42,22 @@ let g:go_fmt_fail_silently = 1
 " ------------------------------------------------------
 " NERDTree - https://github.com/scrooloose/nerdtree
 " ------------------------------------------------------
+
 " open on start
 au VimEnter * NERDTreeToggle
+
+" close after opening the first file
+" you can reopen it with ctrl+n
+let NERDTreeQuitOnOpen=1
+
 let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinSize=35
+
+" ignore certain files and dirs
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'bower_components']
-let g:NERDTreeWinSize=35
+
+" keyboard mappings
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nb :NERDTreeFromBookmark 
 map <leader>nf :NERDTreeFind<cr>

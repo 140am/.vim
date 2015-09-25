@@ -148,4 +148,4 @@ If you wish to set custom settings create the file `~/.vimrc.custom`.
 
 ## Credit
 
-Most of the plugins I choosed to use I found via the great [vimrc](https://github.com/amix/vimrc) by @amix and the [gist](https://gist.github.com/cridenour/74e7635275331d5afa6b) by @cridenour. Thank you!
+Most of the plugins I choosed to use I found via the great [vimrc](https://github.com/amix/vimrc) by @amix and the [gist](https://gist.github.com/cridenour/74e7635275331d5afa6b) by @cridenour.

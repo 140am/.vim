@@ -85,7 +85,8 @@ Syntax checking using multiple external syntax checkers.
 Provides keyword completion.
 
 ### tagbar
-Eeasy way to browse the tags of the current file and get an overview of its structure. Requires [Exuberant ctags](http://ctags.sourceforge.net/) and if used with `go` [gotags](https://github.com/jstemmer/gotags).
+Eeasy way to browse the tags of the current file and get an overview of its structure.
+Requires [Exuberant ctags](http://ctags.sourceforge.net/) and if used with `go` [gotags](https://github.com/jstemmer/gotags).
 
 ### bufexplorer
 Quickly and easily switch between buffers.

@@ -108,7 +108,7 @@ Inspired by iA Writer for editing Markdown and reStructuredText in a distraction
 ### vim-gnupg
 Transparent editing of GPG encrypted files editing in ".gpg", ".pgp" or ".asc".
 
-### Language specific plugins for syntax, ident and compiling support
+### Language syntax, ident and compiling support
 - Go
 - Javascript
 - Coffee-Script

@@ -1,4 +1,4 @@
-# vim @140am
+# My VIM text editor setup
 
 ## What is this?
 
@@ -7,6 +7,23 @@ I appreciate a good IDE (hi JetBrains and Sublime Text) but love the speed and f
 ## How does it look?
 
 ![Screenshot 1](http://get.140.am/i/iIaAUTiMJM_TxcFqKf-lQWS56rtgGI0qxkgE6IVpEDk.png)
+
+
+## Installation
+
+Clone the repository to your machine:
+
+> git clone git://github.com/140am/.vim.git ~/.vim  
+> cd .vim  
+> git submodule init  
+> git submodule update  
+> cat ~/.vim/vimrc > ~/.vimrc
+
+Start `vim` or `mvim` (MacVim).
+
+Install go tools if required (gocode, godef, goimport,..) within `vim` via:
+
+> :GoInstallBinaries
 
 
 ## Requirements
@@ -37,22 +54,6 @@ To make use of the `ag` search plugin install:
 
 > brew install the_silver_searcher
 
-## Installation
-
-Clone the repository to your machine:
-
-> git clone git://github.com/140am/vimrc.git ~/.vim  
-> cd .vim  
-> git submodule init  
-> git submodule update  
-> cat ~/.vim/vimrc > ~/.vimrc
-
-Start `vim` or `mvim` (MacVim).
-
-Install go tools if required (gocode, godef, goimport,..) within `vim` via:
-
-> :GoInstallBinaries
-
 
 ## Example Keyboard Shortcuts
 
@@ -63,7 +64,7 @@ Install go tools if required (gocode, godef, goimport,..) within `vim` via:
 
 - \\ + ig : Highlight 
 
-## Used Plugins
+## Included Plugins
 
 ### pathogen
 Manages the vim runtime. To install any new vim plugin simply place them into `.vim/bundle`.
@@ -84,7 +85,8 @@ Syntax checking using multiple external syntax checkers.
 Provides keyword completion.
 
 ### tagbar
-Eeasy way to browse the tags of the current file and get an overview of its structure. Requires [Exuberant ctags](http://ctags.sourceforge.net/) and if used with `go` [gotags](https://github.com/jstemmer/gotags).
+Eeasy way to browse the tags of the current file and get an overview of its structure.
+Requires [Exuberant ctags](http://ctags.sourceforge.net/) and if used with `go` [gotags](https://github.com/jstemmer/gotags).
 
 ### bufexplorer
 Quickly and easily switch between buffers.
@@ -104,11 +106,16 @@ Visually displays indent levels.
 ### vim-zenroom2 + goyo.vim
 Inspired by iA Writer for editing Markdown and reStructuredText in a distraction free environment.
 
-### vim-coffee-script
-CoffeeScript syntax, indenting, compiling support.
+### vim-gnupg
+Transparent editing of GPG encrypted files editing in ".gpg", ".pgp" or ".asc".
 
-### vim-go
-Go comes with basic vim plugins. The `vim-go` plugin provides additional improved syntax highlighting, auto completion, gofmt on save, go to declrations and much more.
+### Language syntax, ident and compiling support
+- Go
+- Javascript
+- Coffee-Script
+- Json
+- Markdown
+- Puppet Configurations
 
 
 ## Color Themes
@@ -147,4 +154,4 @@ If you wish to set custom settings create the file `~/.vimrc.custom`.
 
 ## Credit
 
-Most of the plugins I choosed to use I found via the great [vimrc](https://github.com/amix/vimrc) by @amix and the [gist](https://gist.github.com/cridenour/74e7635275331d5afa6b) by @cridenour. Thank you!
+Most of the plugins I choosed to use I found via the great [vimrc](https://github.com/amix/vimrc) by @amix and the [gist](https://gist.github.com/cridenour/74e7635275331d5afa6b) by @cridenour.

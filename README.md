@@ -64,7 +64,7 @@ To make use of the `ag` search plugin install:
 
 - \\ + ig : Highlight 
 
-## Used Plugins
+## Included Plugins
 
 ### pathogen
 Manages the vim runtime. To install any new vim plugin simply place them into `.vim/bundle`.
@@ -105,11 +105,16 @@ Visually displays indent levels.
 ### vim-zenroom2 + goyo.vim
 Inspired by iA Writer for editing Markdown and reStructuredText in a distraction free environment.
 
-### vim-coffee-script
-CoffeeScript syntax, indenting, compiling support.
+### vim-gnupg
+Transparent editing of GPG encrypted files editing in ".gpg", ".pgp" or ".asc".
 
-### vim-go
-Go comes with basic vim plugins. The `vim-go` plugin provides additional improved syntax highlighting, auto completion, gofmt on save, go to declrations and much more.
+### Language specific plugins for syntax, ident and compiling support
+- Go
+- Javascript
+- Coffee-Script
+- Json
+- Markdown
+- Puppet Configurations
 
 
 ## Color Themes

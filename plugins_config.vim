@@ -172,3 +172,13 @@ endif
 let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+" ------------------------------------------------------
+" vim-airline https://github.com/bling/vim-airline
+" ------------------------------------------------------
+" Default color theme
+let g:airline_theme='bubblegum'
+" Disable whitespace checks
+let g:airline#extensions#whitespace#checks=[]
+" Enable tagbar support
+let g:airline#extensions#tagbar#enabled = 1

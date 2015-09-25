@@ -1,4 +1,4 @@
-# vim @140am
+# My VIM text editor setup
 
 ## What is this?
 
@@ -7,6 +7,23 @@ I appreciate a good IDE (hi JetBrains and Sublime Text) but love the speed and f
 ## How does it look?
 
 ![Screenshot 1](http://get.140.am/i/iIaAUTiMJM_TxcFqKf-lQWS56rtgGI0qxkgE6IVpEDk.png)
+
+
+## Installation
+
+Clone the repository to your machine:
+
+> git clone git://github.com/140am/.vim.git ~/.vim  
+> cd .vim  
+> git submodule init  
+> git submodule update  
+> cat ~/.vim/vimrc > ~/.vimrc
+
+Start `vim` or `mvim` (MacVim).
+
+Install go tools if required (gocode, godef, goimport,..) within `vim` via:
+
+> :GoInstallBinaries
 
 
 ## Requirements
@@ -36,22 +53,6 @@ If you plan on using `go` install:
 To make use of the `ag` search plugin install:
 
 > brew install the_silver_searcher
-
-## Installation
-
-Clone the repository to your machine:
-
-> git clone git://github.com/140am/vimrc.git ~/.vim  
-> cd .vim  
-> git submodule init  
-> git submodule update  
-> cat ~/.vim/vimrc > ~/.vimrc
-
-Start `vim` or `mvim` (MacVim).
-
-Install go tools if required (gocode, godef, goimport,..) within `vim` via:
-
-> :GoInstallBinaries
 
 
 ## Example Keyboard Shortcuts

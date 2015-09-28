@@ -131,7 +131,9 @@ hi Pmenu guifg=#ffffff guibg=#cb2f27
 
 " highlight current cursor line
 hi CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=#2E2E2E guifg=NONE
-set cursorline
+if has("gui_running")
+  set cursorline
+endif
  
 " always show the status line
 set laststatus=2

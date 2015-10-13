@@ -95,6 +95,12 @@ set wildmenu
 " ignore ext for auto complete
 set wildignore=.svn,CVS,.git,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.pyc,*.pyo,*.swp,*.jpg,*.png,*.xpm,*.gif
 
+" read modeline of a file
+set modelines=1
+
+" redraw only when we need to.
+set lazyredraw
+
 " spelling
 " set spell
 

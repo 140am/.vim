@@ -22,8 +22,9 @@ set expandtab
 set smarttab
 " number of space to use for auto indent
 set shiftwidth=2
-" user spaces to represent a tab
+" number of visual spaces per TAB
 set tabstop=2
+" number of spaces in tab when editing
 set softtabstop=2
 
 " text width / wrapping
@@ -215,4 +216,3 @@ source ~/.vim/helper_function.vim
 source ~/.vim/keymap.vim
 source ~/.vim/language_support.vim
 source ~/.vim/plugins_config.vim
-

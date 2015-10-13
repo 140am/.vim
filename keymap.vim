@@ -13,9 +13,8 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 map <silent><A-Right> :tabnext<CR>
 map <silent><A-Left> :tabprevious<CR>
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
+" space open/closes folds
+nnoremap <space> za
 
 " Smart way to move between windows
 map <C-j> <C-W>j

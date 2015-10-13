@@ -7,6 +7,7 @@
 " ------------------------------------------------------
 " General Options
 " ------------------------------------------------------
+
 " enable syntax highlighting
 syntax on
 " enable file type plugins
@@ -38,10 +39,14 @@ syntax sync minlines=256
 set synmaxcol=300
 set re=1
 
-set foldmethod=syntax
+" enable folding
+set foldenable
+" open most folds by default
+set foldlevelstart=10
+" 10 nested fold max
 set foldnestmax=10
-set nofoldenable
-set foldlevel=0
+" fold based on indent level
+set foldmethod=indent
 
 " Show matching brackets when text indicator is over them
 set showmatch 

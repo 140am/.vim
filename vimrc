@@ -112,10 +112,15 @@ highlight BadWhitespace ctermbg=red guibg=red
 match BadWhitespace /^\t\+/
 match BadWhitespace /\s\+$/
 
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
-set nobackup
 set nowb
 set noswapfile
+
+" enable backups but store all files in tmp directory
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
 
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8

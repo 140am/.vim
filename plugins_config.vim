@@ -182,3 +182,16 @@ let g:airline_theme='bubblegum'
 let g:airline#extensions#whitespace#checks=[]
 " Enable tagbar support
 let g:airline#extensions#tagbar#enabled = 1
+
+" ------------------------------------------------------
+" https://github.com/kien/ctrlp.vim
+" ------------------------------------------------------
+" order matching files top to bottom with ttb
+let g:ctrlp_match_window = 'bottom,order:ttb'
+" always open files in new buffers
+let g:ctrlp_switch_buffer = 0
+" change the working directory during a Vim session
+let g:ctrlp_working_path_mode = 0
+" use Ag insetad of default vimscript implementation
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+

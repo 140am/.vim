@@ -1,7 +1,7 @@
-" use 4 spaces instead of tabs
+" use 2 spaces instead of tabs
 setlocal expandtab
-setlocal shiftwidth=4
+setlocal shiftwidth=2
 setlocal shiftround
-setlocal tabstop=4
+setlocal tabstop=2
 
 let javascript_enable_domhtmlcss=1

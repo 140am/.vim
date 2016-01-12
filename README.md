@@ -2,7 +2,7 @@
 
 ## What is this?
 
-I appreciate a good IDE (hi JetBrains and Sublime Text) but love the speed and flexibility of [vim](http://www.vim.org/) and [MacVim](https://github.com/macvim-dev/macvim). After years of Sublime Text 2/3 use I moved back to `vim` but did not want to loose anything I got used to. My primary motivation being the lack of a good `go` plugin and my lag of mouse use. This is my daily used stable configuration of plugins and settings using MacVim on OS X.
+I appreciate a good IDE (hi JetBrains and Sublime Text) but love the speed and flexibility of [vim](http://www.vim.org/). After years of Sublime Text 2/3 use, I moved back to `vim` but did not want to loose anything I got used to. This is my daily used stable configuration of plugins and settings using `vim` on OS X.
 
 
 ## How does it look?

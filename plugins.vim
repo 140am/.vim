@@ -1,31 +1,46 @@
 " ------------------------------------------------------
+" python-mode - https://github.com/klen/python-mode
+" ------------------------------------------------------
+
+" PEP8 warnings to ignore
+let g:pep8_ignore = "E501,E701,E203,E251,E203,E201"
+
+" ------------------------------------------------------
 " goyo.vim - https://github.com/junegunn/goyo.vim
 " ------------------------------------------------------
 function! s:goyo_enter()
   if has('gui_running')
     set fullscreen
-    " set background=light
-    colorscheme mayansmoke
     set linespace=7
   elseif exists('$TMUX')
     silent !tmux set status off
   endif
+
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
 endfunction
 
 function! s:goyo_leave()
   if has('gui_running')
-    colorscheme molokai
     set linespace=0
   elseif exists('$TMUX')
     silent !tmux set status on
   endif
+
+  set showmode
+  set showcmd
+  set scrolloff=5
+
+  " hack to reset line highlighting
+  highlight CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#2E2E2E guifg=NONE
 endfunction
 
 autocmd User GoyoEnter nested call <SID>goyo_enter()
 autocmd User GoyoLeave nested call <SID>goyo_leave()
 
 " ------------------------------------------------------
-" vim-g - https://github.com/fatih/vim-go
+" vim-go - https://github.com/fatih/vim-go
 " ------------------------------------------------------
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -38,33 +53,31 @@ let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 0
 let g:go_fmt_fail_silently = 1
 
-
 " ------------------------------------------------------
 " NERDTree - https://github.com/scrooloose/nerdtree
+"
+" The NERDtree plugin displays a file browser in the right hand bar
 " ------------------------------------------------------
 
-" open on start
-au VimEnter * NERDTreeToggle
+" open browser on start
+" au VimEnter * NERDTreeToggle
 
-" close after opening the first file
-" you can reopen it with ctrl+n
-let NERDTreeQuitOnOpen=1
-
+" display the file browser at the right side
 let g:NERDTreeWinPos = "right"
-let g:NERDTreeWinSize=35
+let g:NERDTreeWinSize=25
 
-" ignore certain files and dirs
+" close browser window after opening the first file
+let NERDTreeQuitOnOpen=1
+" you can reopen it with ctrl+n
+
+" to not display certain files and directories
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules', 'bower_components']
-
-" keyboard mappings
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark 
-map <leader>nf :NERDTreeFind<cr>
 
 " ------------------------------------------------------
 " Ag - https://github.com/rking/ag.vim
 " ------------------------------------------------------
+
 " start searching from your project root instead of the cwd
 let g:ag_working_path_mode="r"
 
@@ -103,10 +116,13 @@ let g:tagbar_width = 28
 
 " Use AutoComplPop.
 let g:acp_enableAtStartup = 0
+
 " Use neocomplete.
 let g:neocomplete#enable_at_startup = 1
+
 " Use smartcase.
 let g:neocomplete#enable_smart_case = 1
+
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
@@ -176,22 +192,29 @@ let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\
 " ------------------------------------------------------
 " vim-airline https://github.com/bling/vim-airline
 " ------------------------------------------------------
+
 " Default color theme
 let g:airline_theme='bubblegum'
+
 " Disable whitespace checks
 let g:airline#extensions#whitespace#checks=[]
+
 " Enable tagbar support
 let g:airline#extensions#tagbar#enabled = 1
 
 " ------------------------------------------------------
 " https://github.com/kien/ctrlp.vim
 " ------------------------------------------------------
+
 " order matching files top to bottom with ttb
 let g:ctrlp_match_window = 'bottom,order:ttb'
+
 " always open files in new buffers
 let g:ctrlp_switch_buffer = 0
+
 " change the working directory during a Vim session
 let g:ctrlp_working_path_mode = 0
+
 " use Ag insetad of default vimscript implementation
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 

@@ -1,5 +1,5 @@
 " ------------------------------------------------------
-" Maintainer: 
+" Maintainer:
 "       Manuel Kreutz
 "       http://140.am - manuel@140.am
 " ------------------------------------------------------
@@ -8,14 +8,32 @@
 " General Options
 " ------------------------------------------------------
 
+" use 256 colors
+set t_Co=256
+
 " enable syntax highlighting
 syntax on
+
+" set file type based on file extensions
+augroup filetypedetect
+  " Markdown .md extension
+  au BufRead,BufNewFile *.md set filetype=markdown
+  " Apache Pig
+  au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
+augroup END
+
 " enable file type plugins
 filetype plugin indent on
 
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+" copy the indentation from the previous line on new lines
 set autoindent
 " smart indent
-set si 
+set smartindent
 " use spaces instead of tabs
 set expandtab
 " add/removal of space indent
@@ -30,12 +48,9 @@ set softtabstop=2
 " text width / wrapping
 set textwidth=79
 set fo-=t
-set wrap 
+set wrap
 
-" speed up syntax highlighting
-set nocursorcolumn
-set nocursorline
-
+" avoid columns getting to long
 syntax sync minlines=256
 set synmaxcol=300
 set re=1
@@ -50,7 +65,7 @@ set foldnestmax=10
 set foldmethod=indent
 
 " Show matching brackets when text indicator is over them
-set showmatch 
+set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 " Add a bit extra margin to the left
@@ -63,7 +78,7 @@ set incsearch
 set hlsearch
 " case insensitive search for lower case searches
 set ignorecase
-" when searching try to be smart about cases 
+" when searching try to be smart about cases
 set smartcase
 " show line and column number
 set nonumber
@@ -102,18 +117,12 @@ set modelines=1
 " redraw only when we need to.
 set lazyredraw
 
-" spelling
-" set spell
+" highlight current cursor line
+set cursorline
 
-" :W sudo saves the file 
-" (useful for handling the permission-denied error)
-" command W w !sudo tee % > /dev/null
-
-highlight BadWhitespace ctermbg=red guibg=red
-match BadWhitespace /^\t\+/
-match BadWhitespace /\s\+$/
-
+" disable automatic write backup
 set nowb
+" disable temporary swap files
 set noswapfile
 
 " enable backups but store all files in tmp directory
@@ -129,7 +138,7 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=useopen,usetab,newtab
   set stal=2
@@ -137,21 +146,14 @@ catch
 endtry
 
 " Return to last edit position when opening files (You want this!)
-" autocmd BufReadPost *
-"      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-"      \   exe "normal! g`\"" |
-"      \ endif
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
 " Remember info about open buffers on close
-" set viminfo^=%
+set viminfo^=%
 
-hi Pmenu guifg=#ffffff guibg=#cb2f27
 
-" highlight current cursor line
-hi CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=#2E2E2E guifg=NONE
-if has("gui_running")
-  set cursorline
-endif
- 
 " always show the status line
 set laststatus=2
 " status line
@@ -159,7 +161,42 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 
 set selectmode=
 
+" ------------------------------------------------------
+" pathogen - https://github.com/tpope/vim-pathogen
+" ------------------------------------------------------
+
+" load all plugins from the `bundle` directory
+execute pathogen#infect()
+
+" ------------------------------------------------------
+" init - put everything together
+" ------------------------------------------------------
+
+source ~/.vim/helper.vim
+source ~/.vim/plugins.vim
+source ~/.vim/keyboard.vim
+
+" enable Mac OS X clipboard copy
+set clipboard=unnamed
+
+" ------------------------------------------------------
+" UI styling
+" ------------------------------------------------------
+
+" set default styling
 set background=dark
+
+" gui only settings
+if has("gui_running")
+    colorscheme molokai
+
+    " no toolbar
+    set guioptions=egmrt
+    set lines=62
+    set columns=165
+else
+    colorscheme desert
+endif
 
 if has("mac") || has("macunix")
     " set guifont=Monaco:h12.00
@@ -170,49 +207,36 @@ elseif has("unix")
     set guifont=Monospace\ 11
 endif
 
-" Open MacVim in fullscreen mode
+" open MacVim in fullscreen mode
 if has("gui_macvim")
     set fuoptions=maxvert,maxhorz
     au GUIEnter * set fullscreen
 endif
 
-" gui only settings
-if has("gui_running")
-    colorscheme molokai
-    set t_Co=256
+" set cursorline colors
+highlight CursorLine cterm=NONE ctermbg=235 ctermfg=NONE guibg=#2E2E2E guifg=NONE
+" set color of number column on cursorline
+highlight CursorLineNR ctermbg=235 ctermfg=white
 
-    " no toolbar
-    set guioptions=egmrt
-    set lines=62
-    set columns=165
-else
-    colorscheme desert
-endif
+" highlight bad whitespace in red
+highlight BadWhitespace ctermbg=red guibg=red
+match BadWhitespace /^\t\+/
+match BadWhitespace /\s\+$/
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
+" color of completion dialog menu
+highlight Pmenu guifg=#ffffff guibg=#cb2f27
 
 " ------------------------------------------------------
-" pathogen - https://github.com/tpope/vim-pathogen
+" configuration handling
 " ------------------------------------------------------
-execute pathogen#infect()
 
-" ------------------------------------------------------
-" Includes
-" ------------------------------------------------------
+" optional custom local vim configuration settings
 if !empty(glob("~/.vimrc.custom"))
     source ~/.vimrc.custom
 endif
 
-" watch for config edits and reload (source) if so
+" watch for `vimrc` config edits and reload configuration
 augroup myvimrc
     au!
     au BufWritePost .vimrc,.vimrc.custom so $MYVIMRC | if has('gui_running') | so $MYGVIMRC | endif
 augroup END
-
-source ~/.vim/helper_function.vim
-source ~/.vim/keymap.vim
-source ~/.vim/language_support.vim
-source ~/.vim/plugins_config.vim

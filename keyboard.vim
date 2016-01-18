@@ -2,12 +2,12 @@ nnoremap <C-b> :BufExplorer<CR><CR>
 " nnoremap <C-i> :TlistToggle<CR><CR>
 nnoremap <C-t> :TagbarToggle<CR>
 nnoremap <C-z> :Goyo<CR>
-nnoremap <C-j> :GoFmt<CR>
+nnoremap <C-f> :GoFmt<CR>
 
 " NERDTree project file browser
 nnoremap <C-n> :NERDTreeToggle<CR><CR>
 map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark 
+map <leader>nb :NERDTreeFromBookmark
 map <leader>nf :NERDTreeFind<cr>
 
 " Visual mode pressing * or # searches for the current selection

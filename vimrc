@@ -132,6 +132,9 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
+" reload buffer if an open file changed on disk while editing
+set autoread
+
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 

@@ -6,7 +6,11 @@ I use the [vim](http://www.vim.org/) text editor for software development. This 
 
 ## How does it look?
 
-![Screenshot 1](http://get.140.am/i/iIaAUTiMJM_TxcFqKf-lQWS56rtgGI0qxkgE6IVpEDk.png)
+![Screenshot 1](http://get.140.am/i/c836e6c0-7aba-4436-8c5e-60a228292d38.png)
+
+Using "Zen" mode [ctrl-z] when reading and editing Markdown files:
+
+![Screenshot 2](http://get.140.am/i/711dd457-7add-4995-a929-6c8478826ba5.png)
 
 ## Requirements
 

@@ -1,13 +1,16 @@
-# My VIM text editor setup
+# VIM @ 1:40am
 
 ## What is this?
 
-I appreciate a good IDE (hi JetBrains and Sublime Text) but love the speed and flexibility of [vim](http://www.vim.org/). After years of Sublime Text 2/3 use, I moved back to `vim` but did not want to loose anything I got used to. This is my daily used stable configuration of plugins and settings using `vim` on OS X.
-
+I use the [vim](http://www.vim.org/) text editor for software development. This is my ready to use configuration including all the [bells and whistles](https://github.com/140am/.vim/wiki/Plugins) I look forward to in my day to day use. Tweaking it slooowly over time.
 
 ## How does it look?
 
-![Screenshot 1](http://get.140.am/i/iIaAUTiMJM_TxcFqKf-lQWS56rtgGI0qxkgE6IVpEDk.png)
+![Screenshot 1](http://get.140.am/i/c836e6c0-7aba-4436-8c5e-60a228292d38.png)
+
+Using "Zen" mode [ctrl-z] when reading and editing Markdown files:
+
+![Screenshot 2](http://get.140.am/i/711dd457-7add-4995-a929-6c8478826ba5.png)
 
 ## Requirements
 

@@ -46,7 +46,6 @@ set tabstop=2
 set softtabstop=2
 " show invisible characters ex tab vs spaces, EOL is handled different
 set listchars=tab:>-,trail:~,extends:>,precedes:<
-set list
 
 " text width / wrapping
 set textwidth=79

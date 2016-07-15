@@ -3,6 +3,9 @@ setlocal foldnestmax=10
 setlocal nofoldenable
 setlocal foldlevel=0
 
+" set gofmt take care of spaces and tabs
+setlocal nolist
+
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds'     : [

@@ -26,7 +26,7 @@ Clone the repository to your machine:
 > cd .vim  
 > git submodule init  
 > git submodule update  
-> cat ~/.vim/vimrc > ~/.vimrc
+> ln -s ~/.vim/vimrc ~/.vimrc
 
 Start `vim` or `mvim` (MacVim).
 

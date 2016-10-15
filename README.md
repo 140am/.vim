@@ -2,7 +2,7 @@
 
 ## What is this?
 
-I use the [vim](http://www.vim.org/) text editor for software development. This is my ready to use configuration including all the [bells and whistles](https://github.com/140am/.vim/wiki/Plugins) I look forward to in my day to day use. Tweaking it slooowly over time.
+[vim](http://www.vim.org/) text editor configuration for software development.
 
 ## How does it look?
 
